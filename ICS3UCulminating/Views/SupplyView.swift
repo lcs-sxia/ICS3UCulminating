@@ -15,17 +15,6 @@ struct SupplyView: View {
         NavigationStack {
             List {
                 Section("Smart Suggestions") {
-                    let expiring = viewModel.getExpiringSoonItems()
-                    if expiring.isEmpty == false {
-                        ForEach(expiring) { item in
-                            HStack {
-                                Image(systemName: "exclamationmark.triangle.fill")
-                                    .foregroundStyle(.orange)
-                                Text("\(item.name) is expiring soon!")
-                            }
-                        }
-                    }
-                    
                     let lowStock = viewModel.getLowStockItems()
                     if lowStock.isEmpty == false {
                         ForEach(lowStock) { item in
@@ -35,9 +24,7 @@ struct SupplyView: View {
                                 Text("\(item.name) is low on stock!")
                             }
                         }
-                    }
-                    
-                    if expiring.isEmpty && lowStock.isEmpty {
+                    } else {
                         Text("All clear! No urgent items.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -50,15 +37,25 @@ struct SupplyView: View {
                             VStack(alignment: .leading) {
                                 Text(item.name)
                                     .font(.headline)
-                                Text(item.category)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                if let notes = item.notes {
+                                    Text(notes)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
                             }
                             
                             Spacer()
                             
-                            Text("\(item.quantity) \(item.unit)")
-                                .foregroundStyle(item.isLowStock ? .red : .primary)
+                            VStack(alignment: .trailing) {
+                                Text("\(item.quantity)")
+                                    .foregroundStyle(item.isLowStock ? .red : .primary)
+                                    .font(.title3)
+                                    .bold()
+                                
+                                Text("Last: \(item.lastPurchased.formatted(date: .abbreviated, time: .omitted))")
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                            }
                         }
                     }
                     .onDelete { indexSet in

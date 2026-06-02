@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		35FC5BD52FCDDC4700F2C088 /* ICS3UCulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BD42FCDDC4700F2C088 /* ICS3UCulminatingApp.swift */; };
 		35FC5BD72FCDDC4800F2C088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FC5BD62FCDDC4800F2C088 /* Assets.xcassets */; };
-		35FC5BDA2FCDDC4800F2C088 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BD92FCDDC4800F2C088 /* House.swift */; };
-		35FC5BDD2FCDDC4800F2C088 /* HouseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BDC2FCDDC4800F2C088 /* HouseListViewModel.swift */; };
-		35FC5BE02FCDDC4800F2C088 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BDF2FCDDC4800F2C088 /* HousesListView.swift */; };
-		35FC5BE22FCDDC4800F2C088 /* HouseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BE12FCDDC4800F2C088 /* HouseItemView.swift */; };
 		35FC5BE42FCDDC4800F2C088 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = 35FC5BE32FCDDC4800F2C088 /* RELEASE.md */; };
 		35FC5BE92FCDE5E500F2C088 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BE82FCDE5E500F2C088 /* MainTabView.swift */; };
 		35FC5BEB2FCDE86D00F2C088 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BEA2FCDE86D00F2C088 /* HomeView.swift */; };
@@ -28,10 +24,6 @@
 		35FC5BD12FCDDC4700F2C088 /* ICS3UCulminating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICS3UCulminating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FC5BD42FCDDC4700F2C088 /* ICS3UCulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICS3UCulminatingApp.swift; sourceTree = "<group>"; };
 		35FC5BD62FCDDC4800F2C088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35FC5BD92FCDDC4800F2C088 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
-		35FC5BDC2FCDDC4800F2C088 /* HouseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewModel.swift; sourceTree = "<group>"; };
-		35FC5BDF2FCDDC4800F2C088 /* HousesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListView.swift; sourceTree = "<group>"; };
-		35FC5BE12FCDDC4800F2C088 /* HouseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseItemView.swift; sourceTree = "<group>"; };
 		35FC5BE32FCDDC4800F2C088 /* RELEASE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
 		35FC5BE82FCDE5E500F2C088 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		35FC5BEA2FCDE86D00F2C088 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -86,7 +78,6 @@
 		35FC5BD82FCDDC4800F2C088 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				35FC5BD92FCDDC4800F2C088 /* House.swift */,
 				35FC5BF42FCE5A2C00F2C088 /* SupplyItem.swift */,
 			);
 			path = Model;
@@ -95,7 +86,6 @@
 		35FC5BDB2FCDDC4800F2C088 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				35FC5BDC2FCDDC4800F2C088 /* HouseListViewModel.swift */,
 				35FC5BF62FCE5A2C00F2C088 /* SupplyViewModel.swift */,
 			);
 			path = ViewModels;
@@ -104,8 +94,6 @@
 		35FC5BDE2FCDDC4800F2C088 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				35FC5BDF2FCDDC4800F2C088 /* HousesListView.swift */,
-				35FC5BE12FCDDC4800F2C088 /* HouseItemView.swift */,
 				35FC5BE82FCDE5E500F2C088 /* MainTabView.swift */,
 				35FC5BEA2FCDE86D00F2C088 /* HomeView.swift */,
 				35FC5BEC2FCDE86D00F2C088 /* SupplyView.swift */,
@@ -190,14 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35FC5BF12FCDE86D00F2C088 /* ChoreView.swift in Sources */,
-				35FC5BE22FCDDC4800F2C088 /* HouseItemView.swift in Sources */,
 				35FC5BEB2FCDE86D00F2C088 /* HomeView.swift in Sources */,
-				35FC5BDA2FCDDC4800F2C088 /* House.swift in Sources */,
 				35FC5BED2FCDE86D00F2C088 /* SupplyView.swift in Sources */,
-				35FC5BE02FCDDC4800F2C088 /* HousesListView.swift in Sources */,
 				35FC5BF32FCDE86D00F2C088 /* CalendarView.swift in Sources */,
 				35FC5BF52FCE5A2C00F2C088 /* SupplyItem.swift in Sources */,
-				35FC5BDD2FCDDC4800F2C088 /* HouseListViewModel.swift in Sources */,
 				35FC5BD52FCDDC4700F2C088 /* ICS3UCulminatingApp.swift in Sources */,
 				35FC5BE92FCDE5E500F2C088 /* MainTabView.swift in Sources */,
 				35FC5BF72FCE5A2C00F2C088 /* SupplyViewModel.swift in Sources */,

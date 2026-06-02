@@ -23,8 +23,8 @@ class SupplyViewModel {
     
     // MARK: - Functions
     
-    func addItem(name: String, category: String, quantity: Int, unit: String, expiryDate: Date?) {
-        let newItem = SupplyItem(name: name, category: category, quantity: quantity, unit: unit, expiryDate: expiryDate)
+    func addItem(name: String, quantity: Int, lowStockThreshold: Int, lastPurchased: Date = Date(), notes: String? = nil) {
+        let newItem = SupplyItem(name: name, quantity: quantity, lowStockThreshold: lowStockThreshold, lastPurchased: lastPurchased, notes: notes)
         items.append(newItem)
     }
     
@@ -41,16 +41,5 @@ class SupplyViewModel {
             }
         }
         return lowStock
-    }
-    
-    // Style-compliant function to get expiring soon items
-    func getExpiringSoonItems() -> [SupplyItem] {
-        var expiringSoon: [SupplyItem] = []
-        for item in items {
-            if let days = item.daysUntilExpiry, days >= 0 && days <= 3 {
-                expiringSoon.append(item)
-            }
-        }
-        return expiringSoon
     }
 }
