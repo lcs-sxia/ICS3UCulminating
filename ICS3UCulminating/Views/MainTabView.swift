@@ -19,10 +19,15 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             // Home Tab
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
+            HomeView(
+                supplyViewModel: supplyViewModel,
+                billViewModel: billViewModel,
+                choreViewModel: choreViewModel,
+                calendarViewModel: calendarViewModel
+            )
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
             
             // Supply Tab
             SupplyView(viewModel: supplyViewModel)
