@@ -29,6 +29,19 @@ class CalendarViewModel {
         events.remove(atOffsets: indexSet)
     }
     
+    func updateEvent(_ event: CalendarEvent, title: String, location: String, startDate: Date, endDate: Date, notes: String?) {
+        for index in 0..<events.count {
+            if events[index].id == event.id {
+                events[index].title = title
+                events[index].location = location
+                events[index].startDate = startDate
+                events[index].endDate = endDate
+                events[index].notes = notes
+                break
+            }
+        }
+    }
+    
     func getOngoingEvents() -> [CalendarEvent] {
         var ongoing: [CalendarEvent] = []
         for event in events {

@@ -37,4 +37,18 @@ class ChoreViewModel {
     func removeChore(at indexSet: IndexSet) {
         chores.remove(atOffsets: indexSet)
     }
+    
+    func updateChore(_ chore: Chore, title: String, assignedTo: String, dueDate: Date, isCompleted: Bool, difficulty: Int, notes: String?) {
+        for index in 0..<chores.count {
+            if chores[index].id == chore.id {
+                chores[index].title = title
+                chores[index].assignedTo = assignedTo
+                chores[index].dueDate = dueDate
+                chores[index].isCompleted = isCompleted
+                chores[index].difficulty = difficulty
+                chores[index].notes = notes
+                break
+            }
+        }
+    }
 }

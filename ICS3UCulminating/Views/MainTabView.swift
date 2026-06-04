@@ -11,6 +11,9 @@ struct MainTabView: View {
     
     // MARK: - Stored properties
     @State private var supplyViewModel = SupplyViewModel()
+    @State private var billViewModel = BillViewModel()
+    @State private var choreViewModel = ChoreViewModel()
+    @State private var calendarViewModel = CalendarViewModel()
     
     // MARK: - Computed properties
     var body: some View {
@@ -28,19 +31,19 @@ struct MainTabView: View {
                 }
             
             // Bill Tab
-            BillView()
+            BillView(viewModel: billViewModel)
                 .tabItem {
                     Label("Bill", systemImage: "banknote")
                 }
             
             // Chore Tab
-            ChoreView()
+            ChoreView(viewModel: choreViewModel)
                 .tabItem {
                     Label("Chore", systemImage: "list.clipboard")
                 }
             
             // Calendar Tab
-            CalendarView()
+            CalendarView(viewModel: calendarViewModel)
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }

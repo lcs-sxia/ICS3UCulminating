@@ -37,4 +37,18 @@ class BillViewModel {
     func removeBill(at indexSet: IndexSet) {
         bills.remove(atOffsets: indexSet)
     }
+    
+    func updateBill(_ bill: Bill, name: String, amount: Double, dueDate: Date, isPaid: Bool, category: String, notes: String?) {
+        for index in 0..<bills.count {
+            if bills[index].id == bill.id {
+                bills[index].name = name
+                bills[index].amount = amount
+                bills[index].dueDate = dueDate
+                bills[index].isPaid = isPaid
+                bills[index].category = category
+                bills[index].notes = notes
+                break
+            }
+        }
+    }
 }
