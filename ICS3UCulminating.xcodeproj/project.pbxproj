@@ -10,6 +10,9 @@
 		3572B8B02FCF64F100B7B71E /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8AF2FCF64F100B7B71E /* Bill.swift */; };
 		3572B8B22FCF64F100B7B71E /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8B12FCF64F100B7B71E /* Chore.swift */; };
 		3572B8B42FCF64F100B7B71E /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8B32FCF64F100B7B71E /* CalendarEvent.swift */; };
+		3572B8B62FCFA14B00B7B71E /* BillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8B52FCFA14B00B7B71E /* BillViewModel.swift */; };
+		3572B8B82FCFA14B00B7B71E /* ChoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8B72FCFA14B00B7B71E /* ChoreViewModel.swift */; };
+		3572B8BA2FCFA14B00B7B71E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572B8B92FCFA14B00B7B71E /* CalendarViewModel.swift */; };
 		35FC5BD52FCDDC4700F2C088 /* ICS3UCulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FC5BD42FCDDC4700F2C088 /* ICS3UCulminatingApp.swift */; };
 		35FC5BD72FCDDC4800F2C088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FC5BD62FCDDC4800F2C088 /* Assets.xcassets */; };
 		35FC5BE42FCDDC4800F2C088 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = 35FC5BE32FCDDC4800F2C088 /* RELEASE.md */; };
@@ -27,6 +30,9 @@
 		3572B8AF2FCF64F100B7B71E /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		3572B8B12FCF64F100B7B71E /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
 		3572B8B32FCF64F100B7B71E /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		3572B8B52FCFA14B00B7B71E /* BillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewModel.swift; sourceTree = "<group>"; };
+		3572B8B72FCFA14B00B7B71E /* ChoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModel.swift; sourceTree = "<group>"; };
+		3572B8B92FCFA14B00B7B71E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		35FC5BD12FCDDC4700F2C088 /* ICS3UCulminating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICS3UCulminating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FC5BD42FCDDC4700F2C088 /* ICS3UCulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICS3UCulminatingApp.swift; sourceTree = "<group>"; };
 		35FC5BD62FCDDC4800F2C088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				35FC5BF62FCE5A2C00F2C088 /* SupplyViewModel.swift */,
+				3572B8B52FCFA14B00B7B71E /* BillViewModel.swift */,
+				3572B8B72FCFA14B00B7B71E /* ChoreViewModel.swift */,
+				3572B8B92FCFA14B00B7B71E /* CalendarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -186,13 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3572B8B82FCFA14B00B7B71E /* ChoreViewModel.swift in Sources */,
 				35FC5BF12FCDE86D00F2C088 /* ChoreView.swift in Sources */,
 				35FC5BEB2FCDE86D00F2C088 /* HomeView.swift in Sources */,
 				35FC5BED2FCDE86D00F2C088 /* SupplyView.swift in Sources */,
+				3572B8B62FCFA14B00B7B71E /* BillViewModel.swift in Sources */,
 				3572B8B22FCF64F100B7B71E /* Chore.swift in Sources */,
 				35FC5BF32FCDE86D00F2C088 /* CalendarView.swift in Sources */,
 				35FC5BF52FCE5A2C00F2C088 /* SupplyItem.swift in Sources */,
 				35FC5BD52FCDDC4700F2C088 /* ICS3UCulminatingApp.swift in Sources */,
+				3572B8BA2FCFA14B00B7B71E /* CalendarViewModel.swift in Sources */,
 				3572B8B02FCF64F100B7B71E /* Bill.swift in Sources */,
 				35FC5BE92FCDE5E500F2C088 /* MainTabView.swift in Sources */,
 				35FC5BF72FCE5A2C00F2C088 /* SupplyViewModel.swift in Sources */,

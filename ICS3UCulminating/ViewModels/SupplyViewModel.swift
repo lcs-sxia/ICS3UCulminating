@@ -2,14 +2,11 @@
 //  SupplyViewModel.swift
 //  ICS3UCulminating
 //
-//  Created by Gemini CLI on 2026/06/01.
-//
 
 import Foundation
 import Observation
 import SwiftUI
 
-// VIEW MODEL
 @Observable
 class SupplyViewModel {
     
@@ -32,7 +29,6 @@ class SupplyViewModel {
         items.remove(atOffsets: indexSet)
     }
     
-    // Style-compliant function to get low stock items (avoiding .filter)
     func getLowStockItems() -> [SupplyItem] {
         var lowStock: [SupplyItem] = []
         for item in items {
@@ -41,5 +37,18 @@ class SupplyViewModel {
             }
         }
         return lowStock
+    }
+    
+    func updateItem(_ item: SupplyItem, name: String, quantity: Int, lowStockThreshold: Int, lastPurchased: Date, notes: String?) {
+        for index in 0..<items.count {
+            if items[index].id == item.id {
+                items[index].name = name
+                items[index].quantity = quantity
+                items[index].lowStockThreshold = lowStockThreshold
+                items[index].lastPurchased = lastPurchased
+                items[index].notes = notes
+                break
+            }
+        }
     }
 }
