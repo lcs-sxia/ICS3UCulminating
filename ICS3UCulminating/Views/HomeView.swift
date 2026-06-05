@@ -15,7 +15,9 @@ struct HomeView: View {
     
     // MARK: - Computed properties
     var body: some View {
+        // NavigationStack: This allows us to move between different screens.
         NavigationStack {
+            // List: Creates a scrolling list of items, similar to a contacts app.
             List {
                 // Welcome Section
                 HomeBannerView()
@@ -34,10 +36,13 @@ struct HomeView: View {
     }
     
     private var urgentSections: some View {
+        // Group: Collects multiple views together without changing the layout.
         Group {
             let ongoingEvents: [CalendarEvent] = calendarViewModel.getOngoingEvents()
             if ongoingEvents.isEmpty == false {
+                // Section: Groups related items together with an optional title.
                 Section("Ongoing Events") {
+                    // ForEach: Repeats a view for every item in a list.
                     ForEach(ongoingEvents) { event in
                         EventRowView(event: event)
                     }
@@ -86,8 +91,11 @@ struct HomeView: View {
     
     func getOverdueBills() -> [Bill] {
         var result: [Bill] = []
+        // We use a manual for-in loop to check every bill one by one.
         for bill in billViewModel.bills {
+            // If the bill's 'isOverdue' property is true...
             if bill.isOverdue {
+                // ...we add it to our list of overdue bills.
                 result.append(bill)
             }
         }
@@ -96,7 +104,9 @@ struct HomeView: View {
     
     func getUrgentChores() -> [Chore] {
         var result: [Chore] = []
+        // We look through all chores to find the urgent ones.
         for chore in choreViewModel.chores {
+            // A chore is urgent if its 'isUrgent' property is true.
             if chore.isUrgent {
                 result.append(chore)
             }
